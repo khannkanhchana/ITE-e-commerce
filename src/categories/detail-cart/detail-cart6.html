@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DetailCard - SkinTools</title>
+    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#f0f9ff",
+                100: "#e0f2fe",
+                200: "#bae6fd",
+                300: "#7dd3fc",
+                400: "#38bdf8",
+                500: "#0ea5e9",
+                600: "#0284c7",
+                700: "#0369a1",
+                800: "#075985",
+                900: "#0c4a6e",
+              },
+              secondary: {
+                50: "#f5f3ff",
+                100: "#ede9fe",
+                200: "#ddd6fe",
+                300: "#c4b5fd",
+                400: "#a78bfa",
+                500: "#8b5cf6",
+                600: "#7c3aed",
+                700: "#6d28d9",
+                800: "#5b21b6",
+                900: "#4c1d95",
+              },
+              dark: "#0f172a",
+              light: "#f8fafc",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-light font-sans antialiased">
+    <!-- Navigation -->
+
+    <nav class="bg-dark text-white shadow-lg sticky top-0 z-50">
+      <div class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <a href="/src/index.html">
+              <i class="fas fa-brain text-3xl text-primary-400 mr-2"></i>
+              <span class="text-xl font-bold"
+                >Skin<span class="text-primary-400">Tools</span></span
+              >
+            </a>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="/src/index.html" class="hover:text-primary-300 transition"
+              >Home</a
+            >
+            <a href="/src/shop.html" class="hover:text-primary-300 transition"
+              >Shop</a
+            >
+            <a
+              href="/src/categories.html"
+              class="hover:text-primary-300 transition"
+              >Categories</a
+            >
+            <a href="/src/about.html" class="hover:text-primary-300 transition"
+              >About</a
+            >
+            <a
+              href="/src/contact.html"
+              class="hover:text-primary-300 transition"
+              >Contact</a
+            >
+          </div>
+
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-white focus:outline-none"
+            >
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 pb-4 border-t border-gray-700"
+        >
+          <a href="/src/index.html" class="block py-2 hover:text-primary-300"
+            >Home</a
+          >
+          <a href="/src/shop.html" class="block py-2 hover:text-primary-300"
+            >Shop</a
+          >
+          <a
+            href="/src/categories.html"
+            class="block py-2 hover:text-primary-300"
+            >Categories</a
+          >
+          <a href="/src/about.html" class="block py-2 hover:text-primary-300"
+            >About</a
+          >
+          <a href="/src/contact.html" class="block py-2 hover:text-primary-300"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      const btn = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- Detail Products -->
+    <div class="bg-gray-100 dark:bg-gray-800 py-8">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row -mx-4">
+          <div class="md:flex-1 px-4">
+            <div class="h-[460px] rounded-lg bg-gray-300 dark:bg-gray-700 mb-4">
+              <img
+                class="w-full h-full object-cover"
+                src="https://sokoskins.shop/cdn/shop/files/1025-dokdo-water-gel-mask-sheet-round-lab-1_720x_9c225ba7-1554-4580-b864-4835266a96de_720x.webp?v=1710668580"
+                alt="Product Image"
+              />
+            </div>
+            <div class="flex -mx-2 mb-4">
+              <div class="w-1/2 px-2">
+                <button
+                  class="w-full bg-gray-900 dark:bg-gray-600 text-white py-2 px-4 rounded-full font-bold hover:bg-gray-800 dark:hover:bg-gray-700"
+                >
+                  Add to Cart
+                </button>
+              </div>
+              <div class="w-1/2 px-2">
+                <button
+                  class="w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white py-2 px-4 rounded-full font-bold hover:bg-gray-300 dark:hover:bg-gray-600"
+                >
+                  Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="md:flex-1 px-4">
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">
+              Product Name
+            </h2>
+            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+              A lightweight cleansing oil to help remove makeup, sebum,
+              blackhead, fine dust, and grime for a thorough cleanse and
+              moisture charge.
+            </p>
+            <div class="flex mb-4">
+              <div class="mr-4">
+                <span class="font-bold text-gray-700 dark:text-gray-300"
+                  >Price:</span
+                >
+                <span class="text-gray-600 dark:text-gray-300">$12.99</span>
+              </div>
+              <div>
+                <span class="font-bold text-gray-700 dark:text-gray-300"
+                  >Availability:</span
+                >
+                <span class="text-gray-600 dark:text-gray-300">In Stock</span>
+              </div>
+            </div>
+            <!-- <div class="mb-4">
+              <span class="font-bold text-gray-700 dark:text-gray-300"
+                >Select Color:</span
+              >
+              <div class="flex items-center mt-2">
+                <button
+                  class="w-6 h-6 rounded-full bg-gray-800 dark:bg-gray-200 mr-2"
+                ></button>
+                <button
+                  class="w-6 h-6 rounded-full bg-red-500 dark:bg-red-700 mr-2"
+                ></button>
+                <button
+                  class="w-6 h-6 rounded-full bg-blue-500 dark:bg-blue-700 mr-2"
+                ></button>
+                <button
+                  class="w-6 h-6 rounded-full bg-yellow-500 dark:bg-yellow-700 mr-2"
+                ></button>
+              </div>
+            </div> -->
+            <div class="mb-4">
+              <span class="font-bold text-gray-700 dark:text-gray-300"
+                >Select Size:</span
+              >
+              <div class="flex items-center mt-2">
+                <button
+                  class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
+                >
+                  10ml
+                </button>
+                <button
+                  class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
+                >
+                  30ml
+                </button>
+                <button
+                  class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
+                >
+                  50ml
+                </button>
+                <button
+                  class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
+                >
+                  100ml
+                </button>
+                <!-- <button
+                  class="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-white py-2 px-4 rounded-full font-bold mr-2 hover:bg-gray-400 dark:hover:bg-gray-600"
+                >
+                  250ml
+                </button> -->
+              </div>
+            </div>
+            <div>
+              <span class="font-bold text-gray-700 dark:text-gray-300"
+                >Product Description:</span
+              >
+              <p class="text-gray-600 dark:text-gray-300 text-sm mt-2">
+                A lightweight cleansing oil to help remove makeup, sebum,
+                blackhead, fine dust, and grime for a thorough cleanse and
+                moisture charge.A lightweight cleansing oil to help remove
+                makeup, sebum, blackhead, fine dust, and grime for a thorough
+                cleanse and moisture charge.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="mb-8 md:mb-0">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-brain text-3xl text-primary-400 mr-2"></i>
+              <span class="text-xl font-bold"
+                >Skin<span class="text-primary-400">Tools</span></span
+              >
+            </div>
+            <p class="text-gray-400 max-w-xs">
+             Innovative skincare tools for the next generation of beauty and self-care.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+            <div>
+              <h3 class="text-lg font-semibold mb-4">About SkinTools</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="/src/about.html" class="text-gray-400 hover:text-white transition"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/shop.html" class="text-gray-400 hover:text-white transition"
+                    >Shop</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/categories.html" class="text-gray-400 hover:text-white transition"
+                    >Categories</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/contact.html" class="text-gray-400 hover:text-white transition"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Technology</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Cognitive AI</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Neural Synthesis</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Decision Engines</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >API Access</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Connect</h3>
+              <div class="flex space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-twitter text-xl"></i
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-linkedin text-xl"></i
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-medium text-xl"></i
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-youtube text-xl"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2026 SkinTools. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
