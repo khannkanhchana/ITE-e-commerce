@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - SkinTools</title>
+    <link rel="stylesheet" href="/src/output.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#f0f9ff",
+                100: "#e0f2fe",
+                200: "#bae6fd",
+                300: "#7dd3fc",
+                400: "#38bdf8",
+                500: "#0ea5e9",
+                600: "#0284c7",
+                700: "#0369a1",
+                800: "#075985",
+                900: "#0c4a6e",
+              },
+              secondary: {
+                50: "#f5f3ff",
+                100: "#ede9fe",
+                200: "#ddd6fe",
+                300: "#c4b5fd",
+                400: "#a78bfa",
+                500: "#8b5cf6",
+                600: "#7c3aed",
+                700: "#6d28d9",
+                800: "#5b21b6",
+                900: "#4c1d95",
+              },
+              dark: "#0f172a",
+              light: "#f8fafc",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-light font-sans antialiased">
+    <!-- Navigation -->
+
+    <nav class="bg-dark text-white shadow-lg sticky top-0 z-50">
+      <div class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <a href="/src/index.html">
+              <i class="fas fa-brain text-3xl text-primary-400 mr-2"></i>
+              <span class="text-xl font-bold"
+                >Skin<span class="text-primary-400">Tools</span></span
+              >
+            </a>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="/src/index.html" class="hover:text-primary-300 transition"
+              >Home</a
+            >
+            <a href="/src/shop.html" class="hover:text-primary-300 transition"
+              >Shop</a
+            >
+            <a
+              href="/src/categories.html"
+              class="hover:text-primary-300 transition"
+              >Categories</a
+            >
+            <a href="/src/about.html" class="hover:text-primary-300 transition"
+              >About</a
+            >
+            <a
+              href="/src/contact.html"
+              class="hover:text-primary-300 transition"
+              >Contact</a
+            >
+          </div>
+
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-white focus:outline-none"
+            >
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 pb-4 border-t border-gray-700"
+        >
+          <a href="/src/index.html" class="block py-2 hover:text-primary-300"
+            >Home</a
+          >
+          <a href="/src/shop.html" class="block py-2 hover:text-primary-300"
+            >Shop</a
+          >
+          <a href="/src/categories.html" class="block py-2 hover:text-primary-300"
+            >Categories</a
+          >
+          <a href="/src/about.html" class="block py-2 hover:text-primary-300"
+            >About</a
+          >
+          <a href="/src/contact.html" class="block py-2 hover:text-primary-300"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      const btn = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Quality Tools for Your Home</h1>
+          <p>
+            Discover our premium collection of home tools and equipment at
+            affordable prices
+          </p>
+
+          <a href="/src/shop.html" class="btn">Shop Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="container">
+      <h2 class="section-title">Featured Products</h2>
+      <div class="products">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://sokoskins.shop/cdn/shop/files/1025-dokdo-cleansing-oil-round-lab-1_e3e7ee17-149e-4bcb-814d-88ce57e96d63_1200x1200.webp?v=1737375147"
+              alt="Drill Machine"
+            />
+          </div>
+          <div class="product-info">
+            <h3>1025 dokdo cleansing milk</h3>
+            <p>1025 dokdo cleansing milk and 30 </p>
+            <div class="product-price">
+              <span class="price">$11.99</span>
+               <button class="add-to-cart"><a href="/src/detail-cart.html">Add to Cart</a></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://www.blushme.lk/cdn/shop/files/Heimish_All_Clean_Balm_Mandarin.png?v=1724592304&width=720"
+              alt="Tool Set"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Clean Balm</h3>
+            <p>Balm-Oil-Milk  Cleansing Balm!</p>
+            <div class="product-price">
+              <span class="price">$12.99</span>
+              <button class="add-to-cart"><a href="/src/detail-cart2.html">Add to Cart</a></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://theskincarelibrary.com/cdn/shop/files/InnisfreeAppleSeedCleansingOil_800x.webp?v=1702892203"
+              alt="Lawn Mower"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Apple Seed Cleansing Oil</h3>
+            <p>Apple Seed Cleansing Oil 150ml</p>
+            <div class="product-price">
+              <span class="price">$19.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://tsubakibeauty.com/cdn/shop/files/tocobo_pore_controle_cleansing_oil.png?v=1772978508"
+              alt="Paint Roller"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Calamine Cleansing Oil</h3>
+            <p>TOCOBO Calamine Pore Control</p>
+            <div class="product-price">
+              <span class="price">$34.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://img.freepik.com/premium-photo/3d-illustraion-cosmetic-skin-care-beauty-spa-cream-mockup-bathroom-interior-medical-healthcare-treatment-fashion-makeup-bottle-tube-packaging_42100-8981.jpg"
+              alt="Paint Roller"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Calamine Pore Control </h3>
+            <p>TOCOBO Calamine </p>
+            <div class="product-price">
+              <span class="price">$30.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://phare.store/cdn/shop/files/iSClinicalYouthEyeComplexPump_ba11b92e-0080-4323-99f9-349402a58f02.png?crop=center&height=1404&v=1773318825&width=936"
+              alt="Paint Roller"
+            />
+          </div>
+          <div class="product-info">
+            <h3>YOUTH EYE COMPLEX</h3>
+            <p>Youth eye complex 20ml</p>
+            <div class="product-price">
+              <span class="price">$21.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+         <!-- Product 7 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://www.cosmeticary.com/cdn/shop/files/Cosmeticary-Bruxelles-dr.althea-grinding-cleansing-balm-lifestyle.jpg?v=1742556634&width=1200"
+              alt="Paint Roller"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Pure Grinding Cleansing Balm</h3>
+            <p> 50ml</p>
+            <div class="product-price">
+              <span class="price">$35.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+         <!-- Product 8 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://koreanskincare.com/cdn/shop/files/ifr_mugwort_sheet_mask_KOR_20230829_01.jpg?v=1709017471"
+              alt="Paint Roller"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Mugwort sheet mask</h3>
+            <p>20ml</p>
+            <div class="product-price">
+              <span class="price">$2.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- Categories Section -->
+    <section class="container">
+      <h2 class="section-title">Shop by Category</h2>
+
+      <div class="categories">
+        <!-- Category Card 1-->
+        <div class="category-card">
+          <a
+            href="/src/categories/cleaner.html"
+            style="display: block; width: 100%; height: 100%"
+          >
+            <div class="category-icon">
+              <img src="/src/images/cleanser1.jpg" alt="Cleanser" />
+            </div>
+            <h3>Cleanser</h3>
+            <p>Oil Cleanser, Water Cleanser</p>
+          </a>
+        </div>
+        
+        <!-- Category Card 2-->
+        <div class="category-card">
+          <a
+            href="/src/categories/toner.html"
+            style="display: block; width: 100%; height: 100%"
+          >
+          <div class="category-icon">
+            <img src="/src/images/tonser.jpg" alt="Toner" />
+          </div>
+          <h3>Toner</h3>
+          <p>Toner, Toner pad and more</p>
+           </a>
+        </div>
+
+        <!-- Category Card 3-->
+
+        <div class="category-card">
+          <a
+            href="/src/categories/toner.html"
+            style="display: block; width: 100%; height: 100%"
+          >
+          <div class="category-icon">
+            <img src="/src/images/moisturizer.jpg" alt="Moisturiser" />
+          </div>
+          <h3>Moisturiser</h3>
+          <p>Moisturizers, Mist, and Oils</p>
+           </a>
+        </div>
+
+        <!-- Category Card 4-->
+        <div class="category-card">
+          <a
+            href="/src/categories/toner.html"
+            style="display: block; width: 100%; height: 100%"
+          >
+          <div class="category-icon">
+            <img src="/src/images/mask.jpg" alt="Mask" />
+          </div>
+          <h3>Mask</h3>
+          <p>Sheet Masks, Wash-off mask more</p>
+           </a>
+        </div>
+
+        <!-- Category Card 5-->
+        <div class="category-card">
+          <a
+            href="/src/categories/toner.html"
+            style="display: block; width: 100%; height: 100%"
+          >
+          <div class="category-icon">
+            <img src="/src/images/treatment.jpg" alt="Treatment" />
+          </div>
+          <h3>Treatment</h3>
+          <p>Essences, Eye Care and more</p>
+           </a>
+        </div>
+
+        <!-- Category Card 6-->
+
+        <div class="category-card">
+          <a
+            href="/src/categories/toner.html"
+            style="display: block; width: 100%; height: 100%"
+          >
+          <div class="category-icon">
+            <img src="/src/images/cosnori.jpg" alt="Cosnori" />
+          </div>
+          <h3>Cosnori</h3>
+          <p>Micro Active Lip&Eye Remover</p>
+           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="mb-8 md:mb-0">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-brain text-3xl text-primary-400 mr-2"></i>
+              <span class="text-xl font-bold"
+                >Skin<span class="text-primary-400">Tools</span></span
+              >
+            </div>
+            <p class="text-gray-400 max-w-xs">
+             Innovative skincare tools for the next generation of beauty and self-care.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+            <div>
+              <h3 class="text-lg font-semibold mb-4">About SkinTools</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="/src/about.html" class="text-gray-400 hover:text-white transition"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/shop.html" class="text-gray-400 hover:text-white transition"
+                    >Shop</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/categories.html" class="text-gray-400 hover:text-white transition"
+                    >Categories</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/contact.html" class="text-gray-400 hover:text-white transition"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Technology</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Cognitive AI</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Neural Synthesis</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Decision Engines</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >API Access</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Connect</h3>
+              <div class="flex space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-twitter text-xl"></i
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-linkedin text-xl"></i
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-medium text-xl"></i
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-youtube text-xl"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2026 SkinTools. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

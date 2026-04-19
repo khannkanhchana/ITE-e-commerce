@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - SkinTools</title>
+    <link rel="stylesheet" href="/src/output.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#f0f9ff",
+                100: "#e0f2fe",
+                200: "#bae6fd",
+                300: "#7dd3fc",
+                400: "#38bdf8",
+                500: "#0ea5e9",
+                600: "#0284c7",
+                700: "#0369a1",
+                800: "#075985",
+                900: "#0c4a6e",
+              },
+              secondary: {
+                50: "#f5f3ff",
+                100: "#ede9fe",
+                200: "#ddd6fe",
+                300: "#c4b5fd",
+                400: "#a78bfa",
+                500: "#8b5cf6",
+                600: "#7c3aed",
+                700: "#6d28d9",
+                800: "#5b21b6",
+                900: "#4c1d95",
+              },
+              dark: "#0f172a",
+              light: "#f8fafc",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-light font-sans antialiased">
+    <!-- Navigation -->
+
+    <nav class="bg-dark text-white shadow-lg sticky top-0 z-50">
+      <div class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <a href="/src/index.html">
+              <i class="fas fa-brain text-3xl text-primary-400 mr-2"></i>
+              <span class="text-xl font-bold"
+                >Skin<span class="text-primary-400">Tools</span></span
+              >
+            </a>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="/src/index.html" class="hover:text-primary-300 transition"
+              >Home</a
+            >
+            <a href="/src/shop.html" class="hover:text-primary-300 transition"
+              >Shop</a
+            >
+            <a
+              href="/src/categories.html"
+              class="hover:text-primary-300 transition"
+              >Categories</a
+            >
+            <a href="/src/about.html" class="hover:text-primary-300 transition"
+              >About</a
+            >
+            <a
+              href="/src/contact.html"
+              class="hover:text-primary-300 transition"
+              >Contact</a
+            >
+          </div>
+
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-white focus:outline-none"
+            >
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden mt-4 pb-4 border-t border-gray-700"
+        >
+          <a href="/src/index.html" class="block py-2 hover:text-primary-300"
+            >Home</a
+          >
+          <a href="/src/shop.html" class="block py-2 hover:text-primary-300"
+            >Shop</a
+          >
+          <a href="/src/categories.html" class="block py-2 hover:text-primary-300"
+            >Categories</a
+          >
+          <a href="/src/about.html" class="block py-2 hover:text-primary-300"
+            >About</a
+          >
+          <a href="/src/contact.html" class="block py-2 hover:text-primary-300"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      const btn = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+
+ <!-- Featured Products -->
+    <section class="container">
+      <h2 class="section-title">All Toners</h2>
+      <div class="products">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://seoulplus.com/wp-content/uploads/2023/08/numbuzin-No.3-Super-Glowing-Essence-Toner-1.jpg"
+              alt="Drill Machine"
+            />
+          </div>
+          <div class="product-info">
+            <h3>1025 dokdo cleansing milk</h3>
+            <p>1025 dokdo cleansing milk and 30</p>
+            <div class="product-price">
+              <span class="price">$11.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://koreanskincare.co.uk/cdn/shop/files/322533216_556416706369785_1508215214943647673_n.jpg?v=1751270783"
+              alt="Tool Set"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Clean Balm</h3>
+            <p>Balm-Oil-Milk Transforming Cleansing!</p>
+            <div class="product-price">
+              <span class="price">$12.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://moonglow.md/wp-content/uploads/2024/05/Realbarrier-Extreme-Extreme-Essence-Toner-200ml.jpg"
+              alt="Lawn Mower"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Apple Seed Cleansing Oil</h3>
+            <p>Apple Seed Cleansing Oil 150ml</p>
+            <div class="product-price">
+              <span class="price">$19.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://d1flfk77wl2xk4.cloudfront.net/Assets/pyunkang-yul-essence-toner-200ml/31/910/XXL_p0070291031.jpg"
+              alt="Paint Roller"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Calamine Pore Control Cleansing Oil</h3>
+            <p>TOCOBO Calamine Pore Control</p>
+            <div class="product-price">
+              <span class="price">$34.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+         <!-- Product 5 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://www.cosmeticary.com/cdn/shop/files/Cosmeticary-Bruxelles-I_m-from-Rice-Toner-lotion-tonique-riz-lifestyle.jpg?v=1745315480&width=1200"
+              alt="Paint Roller"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Calamine Pore Control Cleansing Oil</h3>
+            <p>TOCOBO Calamine Pore Control</p>
+            <div class="product-price">
+              <span class="price">$34.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://www.klairscosmetics.com/wp-content/uploads/2021/07/580x760-10.jpg"
+              alt="Paint Roller"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Calamine Pore Control Cleansing Oil</h3>
+            <p>TOCOBO Calamine Pore Control</p>
+            <div class="product-price">
+              <span class="price">$34.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://sokoglam.com/cdn/shop/files/Soko-Glam-PDP-Klairs-Supple-Preparation-Unscented-Toner-04.png?v=1759795522&width=1445"
+              alt="Paint Roller"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Calamine Pore Control Cleansing Oil</h3>
+            <p>TOCOBO Calamine Pore Control</p>
+            <div class="product-price">
+              <span class="price">$34.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://d2c3d01lcpw2ui.cloudfront.net/gl/data/item/1459924215/PostbyCOSRX1765953747518e859749895d4.webp"
+              alt="Paint Roller"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Calamine Pore Control Cleansing Oil</h3>
+            <p>TOCOBO Calamine Pore Control</p>
+            <div class="product-price">
+              <span class="price">$34.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://www.kosmosbeauty.com/cdn/shop/files/2025-08-08T160258.834.png?v=1754658199&width=1500"
+              alt="Paint Roller"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Calamine Pore Control Cleansing Oil</h3>
+            <p>TOCOBO Calamine Pore Control</p>
+            <div class="product-price">
+              <span class="price">$34.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://d2c3d01lcpw2ui.cloudfront.net/gl/data/item/1619405438/tner174960790919007b42ca574dc.jpg"
+              alt="Paint Roller"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Calamine Pore Control Cleansing Oil</h3>
+            <p>TOCOBO Calamine Pore Control</p>
+            <div class="product-price">
+                 <span class="price">$34.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://moonglow.md/wp-content/uploads/2022/07/its_skin__hyaluronic_acid_toner-_-1647525980.webp"
+              alt="Paint Roller"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Calamine Pore Control Cleansing Oil</h3>
+            <p>TOCOBO Calamine Pore Control</p>
+            <div class="product-price">
+              <span class="price">$34.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="https://phare.store/cdn/shop/files/iSClinicalYouthEyeComplexPump_ba11b92e-0080-4323-99f9-349402a58f02.png?crop=center&height=1404&v=1773318825&width=936"
+              alt="Paint Roller"
+            />
+          </div>
+          <div class="product-info">
+            <h3>Calamine Pore Control Cleansing Oil</h3>
+            <p>TOCOBO Calamine Pore Control</p>
+            <div class="product-price">
+              <span class="price">$34.99</span>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="mb-8 md:mb-0">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-brain text-3xl text-primary-400 mr-2"></i>
+              <span class="text-xl font-bold"
+                >Skin<span class="text-primary-400">Tools</span></span
+              >
+            </div>
+            <p class="text-gray-400 max-w-xs">
+             Innovative skincare tools for the next generation of beauty and self-care.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+            <div>
+              <h3 class="text-lg font-semibold mb-4">About SkinTools</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="/src/about.html" class="text-gray-400 hover:text-white transition"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/shop.html" class="text-gray-400 hover:text-white transition"
+                    >Shop</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/categories.html" class="text-gray-400 hover:text-white transition"
+                    >Categories</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/contact.html" class="text-gray-400 hover:text-white transition"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Technology</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Cognitive AI</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Neural Synthesis</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >Decision Engines</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-white transition"
+                    >API Access</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold mb-4">Connect</h3>
+              <div class="flex space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-twitter text-xl"></i
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-linkedin text-xl"></i
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-medium text-xl"></i
+                ></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  ><i class="fab fa-youtube text-xl"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2026 SkinTools. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
